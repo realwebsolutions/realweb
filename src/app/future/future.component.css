@@ -1,0 +1,51 @@
+
+.vision-text-container {
+    max-width: 800px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  .bg-black{
+    background-image: url("../../assets/future.png");
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: right top;
+
+  }
+  #home{
+    font-family: 'Bruno Ace SC', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: linear-gradient(90deg, #600140 1.36%, #F60286 51.06%, #686868 93.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+  }
+  .vision-text {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .vision-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    font-family: 'Bruno Ace SC', sans-serif;
+
+    
+  } 
+  @media (max-width: 550px) {
+
+  .vision-text {
+    font-size: medium;
+  }
+}
