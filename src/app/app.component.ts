@@ -4,12 +4,13 @@ import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { FooterComponent } from './footer/footer.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterOutlet,MatIconModule,CommonModule,MatCardModule],
+  imports: [RouterOutlet, RouterLink, RouterOutlet,MatIconModule,CommonModule,MatCardModule,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [

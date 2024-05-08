@@ -4,6 +4,7 @@ import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { SpaceComponent } from './space/space.component';
 import { VisionComponent } from './vision/vision.component';
 import { FutureComponent } from './future/future.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const routes: Routes = [
     { path:'', redirectTo: 'home', pathMatch:"full"},
@@ -12,4 +13,6 @@ export const routes: Routes = [
      { path: 'space', component: SpaceComponent},  
     { path: 'vision', component: VisionComponent},  
     { path: 'future', component: FutureComponent},
+    { path: 'footer', component: FooterComponent},
+
 ];

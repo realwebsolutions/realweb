@@ -37,35 +37,7 @@ nav {
     top: 25px;
   
   }
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-  }
   
-  .social-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  .social-links li {
-    margin-left: 10px;
-  }
-  
-  .social-links a {
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.3s;
-  }
-  
-  .social-links a:hover {
-    color: #ccc;
-  }
-  .display-1 {
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
   
   #home{
     font-family: 'Bruno Ace SC', sans-serif;
@@ -79,6 +51,10 @@ nav {
     -o-background-clip: text;
     color: transparent;
   }
+
+
+ 
+
   @media (max-width: 550px) {
    nav{
     width: 95%;
@@ -88,8 +64,6 @@ nav {
   a{
     padding: 5px 5px;
   }
-  img{
-    width: 25px;
-  }
+  
   }
   
