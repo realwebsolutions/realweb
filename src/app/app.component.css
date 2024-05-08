@@ -67,10 +67,21 @@ nav {
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  
+  #home{
+    font-family: 'Bruno Ace SC', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: linear-gradient(90deg, #600140 1.36%, #F60286 51.06%, #686868 93.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+  }
   @media (max-width: 550px) {
    nav{
-    width: 90%;
+    width: 95%;
     height: 80px;
     font-size: smaller;
   } 

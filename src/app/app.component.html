@@ -1,9 +1,11 @@
 <nav *ngIf="!scrolled" @fadeAnimation>
-    <a routerLink="/home">    <img  src="../assets/hm-min.png" class="img-fluid" width="40px">
+    <a routerLink="/home" id="home">    Home
     </a>
       <a routerLink="/vision">Vision</a>
-      <a routerLink="/programs">Program</a>
-      <a routerLink="/contact">Contact</a>
+      <a routerLink="/knowledge">Knowledge</a>
+      <a routerLink="/space">Space</a>
+      <a routerLink="/future">Future</a>
+
   </nav>
   <nav *ngIf="scrolled" id="scrolled" class="text-white" @fadeAnimation >
       <a (click)="scrol()"> <mat-icon> dehaze</mat-icon></a>

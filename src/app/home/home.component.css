@@ -7,12 +7,20 @@
       font-weight: 500;
       font-style: normal;
       font-size: 50px;
+      background: linear-gradient(90deg, #600140 1.36%, #F60286 51.06%, #686868 93.06%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      -moz-background-clip: text;
+      -o-background-clip: text;
+      color: transparent;
   }
+
   .display-4{
     color: rgb(244, 243, 243);
   }
 .level-up-container{
-    font-family: "Goldman", sans-serif;
+    font-family: "Bangers", system-ui;
     font-weight: 400;
     font-style: normal;
     font-size: 40px;
@@ -44,10 +52,14 @@
 
   @media (max-width: 800px) {
 
-h1{
-    font-size: 25px;
-
-}
+    h1 {
+        font-size: 30px;
+        /* background: linear-gradient(90deg, #600140 1.36%, #F60286 51.06%, #686868 93.06%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent; */
+      }
 #gradient{
     font-size: 20px;
 
@@ -55,6 +67,9 @@ h1{
 .level-up-container{
     margin-top: 0;
     font-size: 20px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 .logo-container {
     max-width: 200px; /* Adjust the max-width as needed */
