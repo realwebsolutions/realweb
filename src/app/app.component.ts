@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [RouterOutlet, RouterLink, RouterOutlet,MatIconModule,CommonModule,MatCardModule,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
+  
   animations: [
     trigger('fadeAnimation', [
       transition(':enter', [
