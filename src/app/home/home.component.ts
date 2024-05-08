@@ -10,13 +10,9 @@ import { Component } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  providers:[
-{    provide: Window , useValue : Window
-}  ]
+ 
 })
 export class HomeComponent {
  
- constructor(private window : Window){
-  
- }
+
 }

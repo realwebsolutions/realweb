@@ -13,7 +13,9 @@ import { FooterComponent } from './footer/footer.component';
   imports: [RouterOutlet, RouterLink, RouterOutlet,MatIconModule,CommonModule,MatCardModule,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  
+  providers:[
+    {    provide: Window , useValue : Window
+    }  ],
   animations: [
     trigger('fadeAnimation', [
       transition(':enter', [
@@ -33,7 +35,7 @@ export class AppComponent {
   title = 'realweb';
   scrolled = false;
   lastScrollY: number = 0;
-  constructor(private router :Router){}
+  constructor(private router :Router, private window : Window){}
   
 home(){
   this.router.navigate(['/home']);
