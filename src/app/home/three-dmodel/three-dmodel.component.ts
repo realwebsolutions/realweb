@@ -25,34 +25,7 @@ export class ThreeDModelComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.init();
-    //  const axesHelper = new THREE.AxesHelper(10); // Adjust the size as needed
-    //   this.scene.add(axesHelper);
     
-      // controls.autoRotate = true;
-      // controls.enableZoom=false;
-      // controls.enablePan=false;
-  
-      // controls.enabled = false;
-
-    if (typeof window !== 'undefined') {
-      const controls = new OrbitControls(this.camera, this.renderer.domElement);
-      controls.update();
-
-      const resizeRendererToDisplaySize = () => {
-        if (typeof window !== 'undefined') {
-          const width = window.innerWidth;
-          const height = window.innerHeight;
-      
-          const aspectRatio = width / height;
-          this.camera.aspect = aspectRatio;
-          this.camera.updateProjectionMatrix();
-      
-          this.renderer.setSize((width -20), height);
-        }
-      };
-      window.addEventListener('resize', resizeRendererToDisplaySize);
-      resizeRendererToDisplaySize();
-    }
   }
 
   init() {
@@ -60,6 +33,7 @@ export class ThreeDModelComponent implements AfterViewInit {
     this.scene = new THREE.Scene();
 
     // Create camera
+   
     this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     this.camera.position.z = 10;
 
@@ -86,12 +60,8 @@ export class ThreeDModelComponent implements AfterViewInit {
 
         this.scene.add(this.model);
         this.animations = gltf.animations;
-        if (this.animations.length > 0) {
           this.mixer = new THREE.AnimationMixer(this.model);
           // const aspectRatio = window.innerWidth / window.innerHeight;
-
-
-
 
           // Play the animations once
       for (let i = 0; i < this.animations.length; i++) {
@@ -102,7 +72,7 @@ export class ThreeDModelComponent implements AfterViewInit {
         }
         
 
-    }
+    
       },
       undefined,
       (error) => {
@@ -112,6 +82,26 @@ export class ThreeDModelComponent implements AfterViewInit {
 
     // Start animation
     this.animate();
+    if (typeof window !== 'undefined') {
+      const controls = new OrbitControls(this.camera, this.renderer.domElement);
+      controls.update();
+
+      const resizeRendererToDisplaySize = () => {
+          const width = window.innerWidth;
+          const height = window.innerHeight;
+      
+          const aspectRatio = width / height;
+          this.camera.aspect = aspectRatio;
+          this.camera.updateProjectionMatrix();
+      
+          this.renderer.setSize((width -20), height);
+      
+      };        
+
+      window.addEventListener('resize', resizeRendererToDisplaySize);
+      resizeRendererToDisplaySize();
+      
+    }
     const pointLight = new THREE.PointLight(0xffffff, 25, 500);
     pointLight.position.set(5, 5, 0);
     this.scene.add(pointLight);
