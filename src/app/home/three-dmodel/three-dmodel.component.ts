@@ -3,11 +3,13 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { LoadingScreenComponent } from '../loading-screen/loading-screen.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-three-dmodel',
   standalone: true,
-  imports: [],
+  imports: [LoadingScreenComponent,CommonModule],
   templateUrl: './three-dmodel.component.html',
   styleUrl: './three-dmodel.component.css'
 })
@@ -20,6 +22,7 @@ export class ThreeDModelComponent implements AfterViewInit {
   model!: THREE.Object3D;
   animations: THREE.AnimationClip[] = [];
   mixer: THREE.AnimationMixer | null = null;
+  isModelLoading = true; // Set to true initially
 
   constructor() { }
 
@@ -57,6 +60,7 @@ export class ThreeDModelComponent implements AfterViewInit {
       (gltf) => {
         this.model = gltf.scene;
         this.model.scale.set(2 ,2, 2);
+        this.isModelLoading = false; // Set to true initially
 
         this.scene.add(this.model);
         this.animations = gltf.animations;

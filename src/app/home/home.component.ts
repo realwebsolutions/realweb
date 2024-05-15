@@ -6,10 +6,11 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js';
 import { ThreeDModelComponent } from './three-dmodel/three-dmodel.component';
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ThreeDModelComponent],
+  imports: [CommonModule, ThreeDModelComponent, LoadingScreenComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],  
   animations: [
@@ -28,7 +29,8 @@ import { ThreeDModelComponent } from './three-dmodel/three-dmodel.component';
   ]
 })
 export class HomeComponent  {
- 
+  isModelLoading = true; // Set to true initially
+
 //   scene = new THREE.Scene();
 //   camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 //   renderer = new THREE.WebGLRenderer({ antialias: true });
