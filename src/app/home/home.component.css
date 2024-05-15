@@ -15,6 +15,11 @@
       -o-background-clip: text;
       color: transparent;
   }
+  #heading{
+    position: absolute;
+    top: 350px;
+    left: 450px;
+  }
 
   .display-4{
     color: rgb(244, 243, 243);
@@ -51,7 +56,10 @@
 
 
   @media (max-width: 800px) {
-
+#heading{
+top: 550px;
+left: auto;
+}
     h1 {
         font-size: 30px;
         /* background: linear-gradient(90deg, #600140 1.36%, #F60286 51.06%, #686868 93.06%);

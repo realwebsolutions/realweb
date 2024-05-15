@@ -13,9 +13,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [RouterOutlet, RouterLink, RouterOutlet,MatIconModule,CommonModule,MatCardModule,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  // providers:[
-  //   {    provide: Window , useValue : Window
-  //   }  ],
+
   animations: [
     trigger('fadeAnimation', [
       transition(':enter', [
@@ -27,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
         animate('800ms', style({ opacity: 0 }))
       ])
     ])
-  ]
+  ],
+
   
 })
 

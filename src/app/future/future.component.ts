@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { trigger, transition, style, animate, keyframes } from '@angular/animations';
+import { trigger, transition, style, animate } from '@angular/animations';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-future',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './future.component.html',
   styleUrl: './future.component.css',
   animations: [
