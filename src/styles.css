@@ -2,3 +2,16 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.active{
+    font-family: 'Bruno Ace SC', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: linear-gradient(90deg, #600140 1.36%, #F60286 51.06%, #686868 93.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    color: transparent;
+  }

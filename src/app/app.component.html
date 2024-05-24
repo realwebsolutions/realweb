@@ -1,14 +1,15 @@
-<nav *ngIf="!scrolled" @fadeAnimation>
-    <a routerLink="/home" id="home">    Home
-    </a>
-      <a routerLink="/vision">Vision</a>
-      <a routerLink="/knowledge">Knowledge</a>
-      <a routerLink="/space">Space</a>
-      <a routerLink="/future">Future</a>
+<router-outlet></router-outlet>
 
-  </nav>
-  <nav *ngIf="scrolled" id="scrolled" class="text-white" @fadeAnimation >
-      <a (click)="scrol()"> <mat-icon> dehaze</mat-icon></a>
-  </nav>
-  <router-outlet ></router-outlet>  <footer class="footer">
-<app-footer></app-footer>
+<nav *ngIf="!scrolled" @fadeAnimation>
+  <a routerLink="/home"   routerLinkActive="active">Home</a>
+  <a routerLink="/vision" routerLinkActive="active"  >Vision</a>
+  <a routerLink="/knowledge" routerLinkActive="active"  >Knowledge</a>
+  <a  routerLink="/space" routerLinkActive="active"  >Space</a>
+  <a  routerLink="/future"routerLinkActive="active"  >Future</a>
+</nav>
+<nav *ngIf="scrolled" id="scrolled" class="text-white" @fadeAnimation>
+  <a (click)="scrol()"><mat-icon>dehaze</mat-icon></a>
+</nav>
+<footer class="footer">
+  <app-footer></app-footer>
+</footer>

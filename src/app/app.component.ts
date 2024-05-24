@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
@@ -10,7 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterOutlet,MatIconModule,CommonModule,MatCardModule,FooterComponent],
+  imports: [RouterOutlet, RouterLink,RouterLinkActive, RouterOutlet,MatIconModule,CommonModule,MatCardModule,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 
@@ -34,7 +34,8 @@ export class AppComponent {
   title = 'realweb';
   scrolled = false;
   lastScrollY: number = 0;
-  constructor(private router :Router){}
+
+  constructor(private router :Router ){}
   
 home(){
   this.router.navigate(['/home']);
